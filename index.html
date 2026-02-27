@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Recommendation Web App</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <nav class="navbar">
+
+            <div class="nav_left">
+                <img src="images/plane.png" alt="plane">
+                TravelBloom
+            </div>
+
+            <div class="nav_center">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about-overlay">About Us</a></li>
+                    <li><a href="#contact-overlay">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav_right">
+                <input type="search" id="searchCity" placeholder="Search a city...">
+                <button id="clearSearch">Clear</button>
+            </div>
+            
+        </nav>
+
+        <main>
+
+            <div class="sidebar">
+                <hr class="verticalLine">
+                <div class="socialDiv">
+                    <img src="images/facebook.png" alt="fb">
+                    <img src="images/insta.png" alt="ig">
+                    <img src="images/X.png" alt="x">
+                    <img src="images/youtube.png" alt="YT">
+                </div>
+            </div>
+
+            <div class="introSection">
+
+                <div class="introWords">
+                    <h2>EXPLORE</h2>
+                    <h2>DREAM</h2>
+                    <h2>DESTINATION</h2>
+                </div>
+
+                <div class="introPara">
+                    <p>It encourages exploration of unfamiliar</p>
+                    <p>territories, embracing diverse cultures and</p>
+                    <p>landscapes, while pursuing the desired</p>
+                    <p>ignites a sense of wonder.</p>
+                </div>
+                
+                <button type="button" id="bookBtn" value="submit">BOOK NOW</button>
+                
+            </div>
+
+            <!--About History -->
+            <div id="about-overlay" class="overlay">
+                <a href="#" class="close-btn">&times;</a>
+            <div class="about-container">
+                <div class="company-info">
+                    <h2>About TravelBloom</h2>
+                    <p>Founded in 2024, TravelBloom is a premier travel consultancy dedicated to creating personalized itineraries that inspire the soul. Our mission is to bridge cultures through sustainable and breathtaking travel experiences.</p>
+                </div>
+                <div class="team-section">
+                    <h3>OUR TEAM</h3>
+                    <div class="team-member">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="member-details">
+                            <strong>Alex Rivera</strong>
+                            <span>Lead Explorer</span>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="member-details">
+                            <strong>Sarah Chen</strong>
+                            <span>Destination Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-overlay" class="overlay">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2>CONTACT US</h2>
+                    <p>Get in Touch</p>
+                </div>
+                <form id="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="form-alert" class="hidden">Thank you! We will get back to you soon.</div>
+            </div>
+        </div>
+        </main>
+    <script>
+        const form = document.getElementById("contact-form");
+        const alertBox = document.getElementById("form-alert");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alertBox.classList.remove("hidden");
+            form.reset();
+        });
+    </script>
+    </body>
+</html>
