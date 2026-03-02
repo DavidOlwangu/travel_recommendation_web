@@ -26,7 +26,7 @@
 
             <div class="nav_right">
                 <input type="search" id="searchCity" placeholder="Search a city...">
-                <button id="clearSearch">Clear</button>
+                <button type="button" id="clearSearch" onclick="clearInput()">Clear</button>
             </div>
             
         </nav>
@@ -106,15 +106,6 @@
             </div>
         </div>
         </main>
-    <script>
-        const form = document.getElementById("contact-form");
-        const alertBox = document.getElementById("form-alert");
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alertBox.classList.remove("hidden");
-            form.reset();
-        });
-    </script>
+        <script src="script.js"></script>
     </body>
 </html>
